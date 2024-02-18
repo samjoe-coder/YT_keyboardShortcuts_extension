@@ -1,0 +1,47 @@
+{
+    "manifest_version": 3,
+    "name": "YT keyboard shortcut",
+    "version": "1.0",
+    "description": "YouTube keyboard shortcuts",
+    "permissions": ["activeTab","scripting"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "commands": {
+
+      "execute-shortcut": {
+        "suggested_key": {
+          "default": "Alt+S"
+        },
+        "description": "Skips an skippable ad when Alt+S is pressed"
+      },
+      "execute-shortcut-p1": {
+        "suggested_key": {
+          "default": "Alt+I"
+        },
+        "description": "Sets the playback speed to 1x(Normal) when Alt+P+0 is pressed"
+      },
+
+      "execute-shortcut-p125": {
+        "suggested_key": {
+          "default": "Alt+O"
+        },
+        "description": "Sets the playback speed to 1.25x when Alt+P+1 is pressed"
+      },
+
+      "execute-shortcut-p15": {
+        "suggested_key": {
+          "default": "Alt+P"
+        },
+        "description": "Sets the playback speed to 1.5x when Alt+P+2 is pressed"
+      }
+      
+    },
+    "content_scripts": [
+        {
+          "matches": ["*://*.youtube.com/*"],
+          "js": ["contentScript.js"]
+        }
+    ]
+  }
+  
