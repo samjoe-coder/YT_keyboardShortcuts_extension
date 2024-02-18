@@ -3,6 +3,9 @@
     "name": "YouTube keyboard shortcut",
     "version": "1.0",
     "description": "keyboard shortcuts for youtube",
+    "icons": { 
+      "128": "logo.png" 
+    },
     "permissions": ["activeTab","scripting"],
     "background": {
       "service_worker": "background.js"
