@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "YT keyboard shortcut",
+    "name": "YouTube keyboard shortcut",
     "version": "1.0",
-    "description": "YouTube keyboard shortcuts",
+    "description": "keyboard shortcuts for youtube",
     "permissions": ["activeTab","scripting"],
     "background": {
       "service_worker": "background.js"
